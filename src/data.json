@@ -1,0 +1,211 @@
+{
+    "products": [
+        {
+        "_id": "shirt1",
+        "image": "/images/a.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt2",
+        "image": "/images/b.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt3",
+        "image": "/images/c.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt4",
+        "image": "/images/d.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt5",
+        "image": "/images/e.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt6",
+        "image": "/images/f.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt7",
+        "image": "/images/g.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt8",
+        "image": "/images/h.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt9",
+        "image": "/images/i.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt10",
+        "image": "/images/j.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt11",
+        "image": "/images/k.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt12",
+        "image": "/images/l.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt13",
+        "image": "/images/m.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt14",
+        "image": "/images/n.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt15",
+        "image": "/images/o.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt16",
+        "image": "/images/p.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt17",
+        "image": "/images/q.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {"_id": "shirt18",
+        "image": "/images/r.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt19",
+        "image": "/images/s.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt20",
+        "image": "/images/t.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt21",
+        "image": "/images/u.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt22",
+        "image": "/images/v.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt23",
+        "image": "/images/w.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt24",
+        "image": "/images/x.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt25",
+        "image": "/images/y.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        },
+        {
+        "_id": "shirt26",
+        "image": "/images/z.png",
+        "title": "Camiseta de verão midi com detalhe espaço",
+        "description": "Isto é para todas as últimas tendências, não importa quem você seja, de onde você vem e o que está fazendo. Exclusiva da ASOS, nossa marca universal está aqui para você e vem em todas as nossas gamas de ajuste: ASOS Curve, Tall, Petite e Maternity. Criado por nós, com estilo por você.",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 29.9
+        }
+    ]
+}

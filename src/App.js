@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Cart from "./components/Cart/Cart";
+import Filter from "./components/Filter/Filter";
+import Products from "./components/Products/Products";
+import data from "./data.json";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      products: data.products,
+      cartItems: [],
+      size: "",
+      sort: "",
+    };
+  }
+
+  removeFromCart = (product) => {};
+
+  addToCart = (product) => {};
+
+  sortProducts = (event) => {};
+
+  filterProducts = (event) => {};
+
+  render() {
+    return (
+      <div className="grid-container">
+        <header>
+          <a href="/">Ecommerce</a>
+        </header>
+        <main>
+          <div className="content">
+            <Filter />
+            <div className="main">
+              <Products
+                products={this.state.products}
+                addToCart={this.addToCart}
+              ></Products>
+            </div>
+            <div className="sidebar">
+              <Cart />
+            </div>
+          </div>
+        </main>
+        <footer>Todos os direitos reservados.</footer>
+      </div>
+    );
+  }
 }
 
 export default App;
