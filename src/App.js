@@ -11,7 +11,8 @@ class App extends React.Component {
       products: data.products,
       cartItems: [],
       size: "",
-      sort: "",
+      type: "",
+      sort: "lowerprice",
     };
   }
 
@@ -19,9 +20,55 @@ class App extends React.Component {
 
   addToCart = (product) => {};
 
-  sortProducts = (event) => {};
+  sortProducts = (event) => {
+    const sort = event.target.value;
+    this.setState(() => ({
+      sort: sort,
+      products: this.state.products
+        .slice()
+        .sort((a, b) =>
+          this.state.sort === "higherprice"
+            ? a.price - b.price
+            : b.price - a.price
+        ),
+    }));
+    this.setState({ type: "" });
+    this.setState({ size: "" });
+  };
 
-  filterProducts = (event) => {};
+  filterProductsSize = (event) => {
+    if (event.target.value === "") {
+      this.setState({
+        size: event.target.value,
+        type: event.target.value,
+        product: data.products,
+      });
+    } else {
+      this.setState({
+        size: event.target.value,
+        products: data.products.filter(
+          (product) => product.availableSizes.indexOf(event.target.value) >= 0
+        ),
+      });
+      this.setState({ type: "" });
+      this.setState({ sort: "" });
+    }
+  };
+
+  filterProductsType = (event) => {
+    if (event.target.value === "") {
+      this.setState({ type: event.target.value, product: data.products });
+    } else {
+      this.setState({
+        type: event.target.value,
+        products: data.products.filter(
+          (product) => product.availableType.indexOf(event.target.value) >= 0
+        ),
+      });
+      this.setState({ size: "" });
+      this.setState({ sort: "" });
+    }
+  };
 
   render() {
     return (
@@ -31,7 +78,15 @@ class App extends React.Component {
         </header>
         <main>
           <div className="content">
-            <Filter />
+            <Filter
+              count={this.state.products.length}
+              size={this.state.size}
+              type={this.state.type}
+              sort={this.state.sort}
+              filterProductsSize={this.filterProductsSize}
+              filterProductsType={this.filterProductsType}
+              sortProducts={this.sortProducts}
+            ></Filter>
             <div className="main">
               <Products
                 products={this.state.products}
