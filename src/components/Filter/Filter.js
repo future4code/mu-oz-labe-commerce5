@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import "./Filter.css";
+
+const FilterContainer = styled.div`
+  display: inline-table;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 2rem;
+  border-bottom: 0.1rem #c0c0c0 solid;
+`;
 
 const InputContainer = styled.label`
   display: flex;
@@ -12,7 +19,7 @@ const InputContainer = styled.label`
 export default class Filter extends Component {
   render() {
     return (
-      <div className="filter">
+      <FilterContainer>
         <div className="filter-result">
           {this.props.count} Produtos Encontrados
         </div>
@@ -72,7 +79,7 @@ export default class Filter extends Component {
             />
           </InputContainer>
         </div>
-      </div>
+      </FilterContainer>
     );
   }
 }
