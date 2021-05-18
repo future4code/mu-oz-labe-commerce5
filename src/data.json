@@ -34,7 +34,7 @@
         "description": "Celebre suas conquistas vestindo nosso Dab espacial! Para pessoas arrojadas que sabem que o céu não é o limite! Conforto e qualidade disponível em diversos tamanhos.",
         "availableSizes": ["XS", "L", "XL", "XXL"],
         "availableType": ["Feminina", "Infantil"],
-        "price": 35.9
+        "price": 35.90
         },
         {
         "_id": "shirt5",
@@ -52,7 +52,7 @@
         "description": "Espaço, Ciência e Rock em uma única estampa! Essa camiseta celebra o amor pelo espaço, pela ciência e por coisas legais. Presente perfeito para observadores de meteóros, amantes de cometas, fãs do espaço e que não dispensam aquele Rock! :D ",
         "availableSizes": ["XS", "S", "XL", "XXL"],
         "availableType": ["Masculina", "Infantil"],
-        "price": 73.8
+        "price": 73.80
         },
         {
         "_id": "shirt7",
@@ -88,7 +88,7 @@
         "description": "Para crianças que sonham alto desde a primeira infância! Linda camiseta em algodão, antialérigica. Conforto, qualidade, proteção e inspiração para crianças de todas as idades! ",
         "availableSizes": ["XS", "S", "M"],
         "availableType": ["Infantil"],
-        "price": 57.5
+        "price": 57.50
         },
         {
         "_id": "shirt11",
@@ -97,7 +97,7 @@
         "description": "Capture aquela pessoa ExTra ordinária com este presente cheio de humor e estilo! Preço especial de lançamento para que você não fique de fora desta jogada! Garanta a sua!",
         "availableSizes": ["XS", "S", "L", "XL"],
         "availableType": ["Feminina","Masculina","Infantil"],
-        "price": 48.8
+        "price": 48.80
         },
         {
         "_id": "shirt12",
@@ -106,7 +106,7 @@
         "description": "Aquela camisa que dispensa geolocalização! Informe onde seus pares podem lhe encontrar ;) Estampa exclusiva em malha cardada, com aquele toque suave e macio para que você se sinta em outro mundo!",
         "availableSizes": ["S", "M", "L"],
         "availableType": ["Feminina", "Masculina"],
-        "price": 54.7
+        "price": 54.70
         },
         {
         "_id": "shirt13",
@@ -115,7 +115,7 @@
         "description": "Linda blusa em malha fria com decote em V, para que busca seus ideais com criatividade e muito estilo!",
         "availableSizes": ["XS", "S", "M", "L", "XXL"],
         "availableType": ["Feminina", "Infantil"],
-        "price": 65.8
+        "price": 65.80
         },
         {
         "_id": "shirt14",
@@ -124,7 +124,7 @@
         "description": "Conforto e proteção para quem mora em nosso coração. Para crianças espaciais! Em algodão penteado e antialérgicas.",
         "availableSizes": ["XS", "S", "M"],
         "availableType": ["Infantil"],
-        "price": 29.9
+        "price": 29.90
         },
         {
         "_id": "shirt15",
@@ -142,7 +142,7 @@
         "description": "Descontração e bom humor para quem gosta de altas ondas! Camisa manga curta masculina, em tricoline. Uma boa opção para te acompanhar nas férias!",
         "availableSizes": ["M", "L", "XL", "XXL"],
         "availableType": ["Masculina"],
-        "price": 84.9
+        "price": 84.90
         },
         {
         "_id": "shirt17",
@@ -151,7 +151,7 @@
         "description": "Porque desafiar as leis da física espacial apenas na terra? Extrapole o seu desconhecimento para todo o nosso sistema solar (?) :D Falando sério, rir ainda é o melhor remédio! Leve seu bom humor para as ruas e faça as pessoas refletirem! ",
         "availableSizes": ["S","L","XL", "XXL"],
         "availableType": ["Feminina", "Masculina"],
-        "price": 34.9
+        "price": 34.90
         },
         {"_id": "shirt18",
         "image": "/images/r.png",
@@ -159,7 +159,7 @@
         "description": "Estilo e conforto para lembrar que não se deixa para amanhã o que se pode fazer hoje!  Busque suas realizações com elegância e criatividade!",
         "availableSizes": ["S", "L", "XL"],
         "availableType": ["Feminina", "Masculina"],
-        "price": 70.0
+        "price": 70.00
         },
         {
         "_id": "shirt19",
@@ -177,7 +177,7 @@
         "description": "Cada cabeça é um mundo, mas, ninguém está sozinho (a) no universo! Procure sua turma e ase divirta nessa aventura que é viver! Camiseta em malha cardada, disponível em diversos tamanhos.",
         "availableSizes": ["S", "M", "L", "XL"],
         "availableType": ["Feminina", "Masculina"],
-        "price": 109.9
+        "price": 109.90
         },
         {
         "_id": "shirt21",
@@ -186,7 +186,7 @@
         "description": "O dog mais querido do planeta terra, também é o mascote oficial da NASA. 1969? Data insquecível para todos os amantes da lua! Essa estampa exclusiva,  traz marcos históricos para seu look casual!",
         "availableSizes": ["XS", "S", "M", "XXL"],
         "availableType": ["Feminina", "Infantil"],
-        "price": 89.9
+        "price": 89.90
         },
         {
         "_id": "shirt22",
@@ -204,7 +204,7 @@
         "description": "Para quem ama os espaço sideral mas, sabe que a Terra é nossa casa! Exprima o seu amor por nosso planeta, inspirando cuidado pelo lugar em que habitamos! Conscitenzação com estilo.",
         "availableSizes": ["XS", "M", "L", "XXL"],
         "availableType": ["Feminina", "Masculina", "Infantil"],
-        "price": 29.0
+        "price": 29.00
         },
         {
         "_id": "shirt24",
@@ -222,7 +222,7 @@
         "description": "Como assim rebaixar Plutão? Uma vez planeta sempre planeta! Declare seu amor aos pequenos usando esta camiseta! Conforto e estilo para as causa justas! :D",
         "availableSizes": ["XS", "M", "XL", "XXL"],
         "availableType": ["Feminina", "Masculina"],
-        "price": 45.9
+        "price": 45.90
         },
         {
         "_id": "shirt26",
@@ -231,7 +231,7 @@
         "description": "A beleza dos sonhos unida ao conforto do moletom! Aquele estilo confortável, na medida ideal para o inverno brasileiro!",
         "availableSizes": ["XS", "S", "L", "XL"],
         "availableType": ["Feminina", "Infantil"],
-        "price": 98.9
+        "price": 98.90
         }
     ]
 }

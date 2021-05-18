@@ -105,7 +105,7 @@ class App extends React.Component {
               <img src={icon} alt="icone-cabecalho" id="icone-cabecalho"/>
               <div className="texto-cabecalho">
                 <span id="titulo-cabecalho">BURACO DE MINHOCA</span>
-                <span id="subtitulo-cabecalho">O E-COMMERCE INFANTIL DE OUTRA GALÁXIA</span>
+                <span id="subtitulo-cabecalho">O E-COMMERCE QUE É DE OUTRA GALÁXIA!</span>
               </div>
             </div>
             </a>
@@ -118,7 +118,7 @@ class App extends React.Component {
           </div>
         </header>
         <main>
-          <div className="content">
+          <div className="container-filtro">
             <Filter
               count={this.state.products.length}
               size={this.state.size}
@@ -134,7 +134,8 @@ class App extends React.Component {
               onChangeMaxFilter={this.onChangeMaxFilter}
               onChangeNameFilter={this.onChangeNameFilter}
             ></Filter>
-            <div className="main">
+          </div>
+          <div className="main">
               <Products
                 products={this.state.products}
                 addToCart={this.addToCart}
@@ -142,7 +143,6 @@ class App extends React.Component {
                 maxFilter={this.state.maxFilter}
                 nameFilter={this.state.nameFilter}
               ></Products>
-            </div>
           </div>
         </main>
         <footer>Todos os direitos reservados.</footer>

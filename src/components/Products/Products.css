@@ -19,6 +19,9 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  background-color: #f0f0f0;
+  border-radius: 50px;
+  border: 1px solid black;
 }
 
 .product a{
@@ -61,10 +64,17 @@
 }
 
 .button.primary {
-  background-color: #604ca8;
+  background-color: #203040;
   margin: 15px;
+  border-radius: 10px;
+  border: 0.1rem solid black;
+  color: #f0f0f0;
 }
 
+.button.primary:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
 
 .product-details{
 display: flex;
