@@ -13,6 +13,9 @@ class App extends React.Component {
       size: "",
       type: "",
       sort: "lowerprice",
+      minFilter: 1,
+      maxFilter: 1000,
+      nameFilter: "",
     };
   }
 
@@ -70,6 +73,18 @@ class App extends React.Component {
     }
   };
 
+  onChangeMinFilter = (event) => {
+    this.setState({ minFilter: event.target.value });
+  };
+
+  onChangeMaxFilter = (event) => {
+    this.setState({ maxFilter: event.target.value });
+  };
+
+  onChangeNameFilter = (event) => {
+    this.setState({ nameFilter: event.target.value });
+  };
+
   render() {
     return (
       <div className="grid-container">
@@ -86,11 +101,20 @@ class App extends React.Component {
               filterProductsSize={this.filterProductsSize}
               filterProductsType={this.filterProductsType}
               sortProducts={this.sortProducts}
+              minFilter={this.state.minFilter}
+              maxFilter={this.state.maxFilter}
+              nameFilter={this.state.nameFilter}
+              onChangeMinFilter={this.onChangeMinFilter}
+              onChangeMaxFilter={this.onChangeMaxFilter}
+              onChangeNameFilter={this.onChangeNameFilter}
             ></Filter>
             <div className="main">
               <Products
                 products={this.state.products}
                 addToCart={this.addToCart}
+                minFilter={this.state.minFilter}
+                maxFilter={this.state.maxFilter}
+                nameFilter={this.state.nameFilter}
               ></Products>
             </div>
             <div className="sidebar">
