@@ -12,7 +12,7 @@ class App extends React.Component {
       cartItems: [],
       size: "",
       type: "",
-      sort: "lowerprice",
+      sort: "",
       minFilter: 1,
       maxFilter: 1000,
       nameFilter: "",
@@ -28,13 +28,21 @@ class App extends React.Component {
     this.setState(() => ({
       sort: sort,
       products: this.state.products
-        .slice()
-        .sort((a, b) =>
-          this.state.sort === "higherprice"
-            ? a.price - b.price
-            : b.price - a.price
-        ),
-    }));
+      .slice()
+      .sort((a, b) =>
+        sort === "lowerprice"
+          ? a.price > b.price
+            ? 1
+            : -1
+          : sort === "higherprice"
+          ? a.price < b.price
+            ? 1
+            : -1
+          : a._id < b._id
+          ? 1
+          : -1
+      ),
+  }));
     this.setState({ type: "" });
     this.setState({ size: "" });
   };
