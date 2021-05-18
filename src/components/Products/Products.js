@@ -18,12 +18,29 @@ export default class Products extends Component {
   closeModal = () => {
     this.setState({ product: null });
   };
+  
+  productsFiltered = () => {
+    return this.props.products
+      .filter((product) =>
+        this.props.minFilter ? product.price > this.props.minFilter : true
+      )
+      .filter((product) =>
+        this.props.maxFilter ? product.price < this.props.maxFilter : true
+      )
+      .filter((product) =>
+        this.props.nameFilter
+          ? product.title.includes(this.props.nameFilter)
+          : true
+      );
+  };
+
   render() {
+    const filterProducts = this.productsFiltered();
     const { product } = this.state;
     return (
       <div>
         <ul className="products">
-          {this.props.products.map((product) => (
+          {filterProducts.map((product) => (
             <li key={product._id}>
               <div className="product">
                 <a
