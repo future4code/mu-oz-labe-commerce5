@@ -1,8 +1,10 @@
 import React from "react";
-import Cart from "./components/Cart/Cart";
+// import Cart from "./components/Cart/Cart";
 import Filter from "./components/Filter/Filter";
 import Products from "./components/Products/Products";
 import data from "./data.json";
+import icon from "./icon.png";
+import iconCart from "./components/Cart/icone_carrinho.png"
 
 class App extends React.Component {
   constructor() {
@@ -97,7 +99,23 @@ class App extends React.Component {
     return (
       <div className="grid-container">
         <header>
-          <a href="/">Ecommerce</a>
+          <div className="cabecalho-principal">
+            <a href="/">
+            <div className="cabecalho-esquerdo">
+              <img src={icon} alt="icone-cabecalho" id="icone-cabecalho"/>
+              <div className="texto-cabecalho">
+                <span id="titulo-cabecalho">BURACO DE MINHOCA</span>
+                <span id="subtitulo-cabecalho">O E-COMMERCE INFANTIL DE OUTRA GALÁXIA</span>
+              </div>
+            </div>
+            </a>
+            <div className="cabecalho-nav">
+              <span>CRIE SUA CONTA</span>
+              <span>ENTRE</span>
+              <span>COMPRAS</span>
+              <a href="./components/Cart/Cart.js"><img src={iconCart} alt="icone-carrinho" id="icone-carrinho"></img></a>
+            </div>
+          </div>
         </header>
         <main>
           <div className="content">
@@ -124,9 +142,6 @@ class App extends React.Component {
                 maxFilter={this.state.maxFilter}
                 nameFilter={this.state.nameFilter}
               ></Products>
-            </div>
-            <div className="sidebar">
-              <Cart />
             </div>
           </div>
         </main>
