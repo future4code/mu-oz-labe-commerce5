@@ -8,7 +8,7 @@ body,
 #root {
   height: 100vh;
   margin: 0;
-  background-image: url("plano_de_fundo.jpg");
+  background-image: url("./img/plano_de_fundo.jpg");
 }
 body, input, select, button, textarea{
   font-size: 1.6rem;
@@ -68,6 +68,7 @@ footer {
   position: sticky;
   height: 41.5rem;
   border-radius: 25px;
+  margin-right: 1rem;
 }
 .main{
   flex: 3 60rem;
