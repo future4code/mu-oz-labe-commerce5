@@ -1,9 +1,9 @@
-<h2 align="center">LabEcommerce</h2>
+<h2 align="center">LabEcommerce - Buraco de Minhoca</h2>
 
 
 <h3 align="center">
   <img alt="LabEcommerce"
-    src="#" width="380px"/>
+    src="https://github.com/future4code/mu-oz-labe-commerce5/blob/master/public/images/principal.png" width="380px"/>
 </h3>
 <hr/>
 
@@ -64,29 +64,31 @@ O conteúdo do arquivo index.js tem as seguintes funcionalidades:
 
 Clone este repositório em sua máquina:
 
-bash
+```bash
 $ git clone https://github.com/future4code/mu-oz-labe-commerce5.git
-
+```
 
 cd `mu-oz-labe-commerce5` e rode:
 
-bash
+```bash
 npm install
+```
 
 
-bash
+```bash
 npm install styled-components
+```
 
 
-bash
+```bash
 npm install react-modal
-
+```
 
 para iniciar:
 
-bash
+```bash
 npm run start
-
+```
 
 
 <br/>
@@ -97,6 +99,7 @@ npm run start
 
 
 P.D. Um protótipo deste aplicativo (MVP - Produto Mínimo Viável) pode ser visto no seguinte endereço:
+
 http://.surge.sh/
 
 

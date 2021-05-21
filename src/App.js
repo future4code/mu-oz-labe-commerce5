@@ -3,7 +3,46 @@ import React from "react";
 import Filter from "./components/Filter/Filter";
 import Products from "./components/Products/Products";
 import data from "./data.json";
-import Header from "./components/Header/Header.js"
+import Header from "./components/Header/Header.js";
+import styled from "styled-components";
+
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 8rem 1fr 5rem;
+  grid-template-columns: 1fr;
+  height: 100%;
+`;
+
+const Main = styled.main`
+  grid-area: main;
+  margin: 40px;
+  display: flex;
+  flex-direction: row;
+`;
+
+const FilterContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffff;
+  top: 2rem;
+  position: sticky;
+  height: 44.5rem;
+  border-radius: 25px;
+  margin-right: 1rem;
+`;
+
+const FooterMain = styled.footer`
+  grid-area: footer;
+  background-color: #203040;
+  color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 class App extends React.Component {
   constructor() {
@@ -29,21 +68,21 @@ class App extends React.Component {
     this.setState(() => ({
       sort: sort,
       products: this.state.products
-      .slice()
-      .sort((a, b) =>
-        sort === "lowerprice"
-          ? a.price > b.price
+        .slice()
+        .sort((a, b) =>
+          sort === "lowerprice"
+            ? a.price > b.price
+              ? 1
+              : -1
+            : sort === "higherprice"
+            ? a.price < b.price
+              ? 1
+              : -1
+            : a._id < b._id
             ? 1
             : -1
-          : sort === "higherprice"
-          ? a.price < b.price
-            ? 1
-            : -1
-          : a._id < b._id
-          ? 1
-          : -1
-      ),
-  }));
+        ),
+    }));
     this.setState({ type: "" });
     this.setState({ size: "" });
   };
@@ -84,22 +123,31 @@ class App extends React.Component {
 
   onChangeMinFilter = (event) => {
     this.setState({ minFilter: event.target.value });
+    this.setState({ type: "" });
+    this.setState({ sort: "" });
+    this.setState({ size: "" });
   };
 
   onChangeMaxFilter = (event) => {
     this.setState({ maxFilter: event.target.value });
+    this.setState({ type: "" });
+    this.setState({ sort: "" });
+    this.setState({ size: "" });
   };
 
   onChangeNameFilter = (event) => {
     this.setState({ nameFilter: event.target.value });
+    this.setState({ type: "" });
+    this.setState({ sort: "" });
+    this.setState({ size: "" });
   };
 
   render() {
     return (
-      <div className="grid-container">
+      <GridContainer>
         <Header />
-        <main>
-          <div className="container-filtro">
+        <Main>
+          <FilterContainer>
             <Filter
               count={this.state.products.length}
               size={this.state.size}
@@ -115,19 +163,19 @@ class App extends React.Component {
               onChangeMaxFilter={this.onChangeMaxFilter}
               onChangeNameFilter={this.onChangeNameFilter}
             ></Filter>
+          </FilterContainer>
+          <div>
+            <Products
+              products={this.state.products}
+              addToCart={this.addToCart}
+              minFilter={this.state.minFilter}
+              maxFilter={this.state.maxFilter}
+              nameFilter={this.state.nameFilter}
+            ></Products>
           </div>
-          <div className="main">
-              <Products
-                products={this.state.products}
-                addToCart={this.addToCart}
-                minFilter={this.state.minFilter}
-                maxFilter={this.state.maxFilter}
-                nameFilter={this.state.nameFilter}
-              ></Products>
-          </div>
-        </main>
-        <footer>Todos os direitos reservados.</footer>
-      </div>
+        </Main>
+        <FooterMain>Todos os direitos reservados.</FooterMain>
+      </GridContainer>
     );
   }
 }
