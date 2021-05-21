@@ -144,7 +144,9 @@ class App extends React.Component {
       case 'home':
         return (
         <GridContainer>
-          <Header aoClicar = {() => this.goCart()} />
+          <Header
+            cartItemClick = {() => this.goCart()}
+            leftHeaderClick = {() => this.goHome()}/>
           <Main>
             <FilterContainer>
               <Filter
@@ -178,7 +180,9 @@ class App extends React.Component {
       case 'cart':
         return(
         <GridContainer>
-          <Header aoClicarCabecalhoEsquerdo = {() => this.goHome()}/>
+          <Header
+          cartItemClick = {() => this.goCart()}
+          leftHeaderClick = {() => this.goHome()}/>
           <Cart 
             cart = {this.state.cartItems}
             cartItemQuantMinus = {() => this.cartItemQuantMinus}
@@ -196,11 +200,9 @@ class App extends React.Component {
     this.setState({pageValue: 'home'})
   }
   cartItemQuantPlus = (productQuant) => {
-    console.log(productQuant)
     // this.setState({cartItemQuant: this.state.cartItemQuant + 1})
   }
   cartItemQuantMinus = (productQuant) => {
-    console.log(productQuant)
     // this.setState({cartItemQuant: this.state.cartItemQuant - 1})
   }
   removeFromCart = (product) => {};
