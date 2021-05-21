@@ -48,14 +48,9 @@ class App extends React.Component {
       minFilter: 1,
       maxFilter: 1000,
       nameFilter: "",
-      valorPagina: 'inicial',
+      pageValue: 'home',
     };
   }
-
-  removeFromCart = (product) => {};
-
-  addToCart = (product) => {};
-
   sortProducts = (event) => {
     const sort = event.target.value;
     this.setState(() => ({
@@ -126,9 +121,9 @@ class App extends React.Component {
     this.setState({ nameFilter: event.target.value });
   };
 
-  renderizarPagina = (valorPagina) =>{
-    switch(valorPagina){
-      case 'inicial':
+  renderizarPagina = (pageValue) =>{
+    switch(pageValue){
+      case 'home':
         return (
         <ContainerGrid>
           <Header aoClicar = {() => this.goCart()} />
@@ -162,26 +157,44 @@ class App extends React.Component {
           </ContainerPrincipal>
           <footer>Todos os direitos reservados.</footer>
         </ContainerGrid>)
-      case 'carrinho':
+      case 'cart':
         return(
         <ContainerGrid>
           <Header aoClicarCabecalhoEsquerdo = {() => this.goHome()}/>
-          <Cart />
+          <Cart 
+            cart = {this.state.cartItems}
+            cartItemQuantMinus = {() => this.cartItemQuantMinus}
+            cartItemQuantPlus = {() => this.cartItemQuantPlus}
+          />
         </ContainerGrid>)
       default:
         return 0
     }    
   }
   goCart = () =>{
-    this.setState({valorPagina: 'carrinho'})
+    this.setState({pageValue: 'cart'})
   }
   goHome = () =>{
-    this.setState({valorPagina: 'inicial'})
+    this.setState({pageValue: 'home'})
   }
+  cartItemQuantPlus = (productQuant) => {
+    console.log(productQuant)
+    // this.setState({cartItemQuant: this.state.cartItemQuant + 1})
+  }
+  cartItemQuantMinus = (productQuant) => {
+    console.log(productQuant)
+    // this.setState({cartItemQuant: this.state.cartItemQuant - 1})
+  }
+  removeFromCart = (product) => {};
+
+  addToCart = (product) => {
+    const newCartItem = product
+    this.setState({cartItems: [...this.state.cartItems, newCartItem]})
+  };
   render() {
     return (
       <div>
-        {this.renderizarPagina(this.state.valorPagina)}
+        {this.renderizarPagina(this.state.pageValue)}
       </div>
     );
   }
