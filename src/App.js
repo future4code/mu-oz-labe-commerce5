@@ -1,11 +1,14 @@
 import React from "react";
-// import Cart from "./components/Cart/Cart";
+import Cart from "./components/Cart/Cart";
 import Filter from "./components/Filter/Filter";
 import Products from "./components/Products/Products";
 import data from "./data.json";
-import Header from "./components/Header/Header.js";
-import styled from "styled-components";
+import Header from "./components/Header/Header.js"
+import styled from 'styled-components';
 
+const ProductContainer = styled.div`
+flex: 3 60rem;
+`
 const GridContainer = styled.div`
   display: grid;
   grid-template-areas:
@@ -43,7 +46,6 @@ const FooterMain = styled.footer`
   justify-content: center;
   align-items: center;
 `;
-
 class App extends React.Component {
   constructor() {
     super();
@@ -56,13 +58,9 @@ class App extends React.Component {
       minFilter: 1,
       maxFilter: 1000,
       nameFilter: "",
+      pageValue: 'home',
     };
   }
-
-  removeFromCart = (product) => {};
-
-  addToCart = (product) => {};
-
   sortProducts = (event) => {
     const sort = event.target.value;
     this.setState(() => ({
@@ -141,41 +139,81 @@ class App extends React.Component {
     this.setState({ sort: "" });
     this.setState({ size: "" });
   };
+  renderizarPagina = (pageValue) =>{
+    switch(pageValue){
+      case 'home':
+        return (
+        <GridContainer>
+          <Header aoClicar = {() => this.goCart()} />
+          <Main>
+            <FilterContainer>
+              <Filter
+                count={this.state.products.length}
+                size={this.state.size}
+                type={this.state.type}
+                sort={this.state.sort}
+                filterProductsSize={this.filterProductsSize}
+                filterProductsType={this.filterProductsType}
+                sortProducts={this.sortProducts}
+                minFilter={this.state.minFilter}
+                maxFilter={this.state.maxFilter}
+                nameFilter={this.state.nameFilter}
+                onChangeMinFilter={this.onChangeMinFilter}
+                onChangeMaxFilter={this.onChangeMaxFilter}
+                onChangeNameFilter={this.onChangeNameFilter}
+              ></Filter>
+            </FilterContainer>
+            <ProductContainer>
+              <Products
+                products={this.state.products}
+                addToCart={this.addToCart}
+                minFilter={this.state.minFilter}
+                maxFilter={this.state.maxFilter}
+                nameFilter={this.state.nameFilter}
+              ></Products>
+            </ProductContainer>
+          </Main>
+          <FooterMain>Todos os direitos reservados.</FooterMain>
+        </GridContainer>)
+      case 'cart':
+        return(
+        <GridContainer>
+          <Header aoClicarCabecalhoEsquerdo = {() => this.goHome()}/>
+          <Cart 
+            cart = {this.state.cartItems}
+            cartItemQuantMinus = {() => this.cartItemQuantMinus}
+            cartItemQuantPlus = {() => this.cartItemQuantPlus}
+          />
+        </GridContainer>)
+      default:
+        return 0
+    }    
+  }
+  goCart = () =>{
+    this.setState({pageValue: 'cart'})
+  }
+  goHome = () =>{
+    this.setState({pageValue: 'home'})
+  }
+  cartItemQuantPlus = (productQuant) => {
+    console.log(productQuant)
+    // this.setState({cartItemQuant: this.state.cartItemQuant + 1})
+  }
+  cartItemQuantMinus = (productQuant) => {
+    console.log(productQuant)
+    // this.setState({cartItemQuant: this.state.cartItemQuant - 1})
+  }
+  removeFromCart = (product) => {};
 
+  addToCart = (product) => {
+    const newCartItem = product
+    this.setState({cartItems: [...this.state.cartItems, newCartItem]})
+  };
   render() {
     return (
-      <GridContainer>
-        <Header />
-        <Main>
-          <FilterContainer>
-            <Filter
-              count={this.state.products.length}
-              size={this.state.size}
-              type={this.state.type}
-              sort={this.state.sort}
-              filterProductsSize={this.filterProductsSize}
-              filterProductsType={this.filterProductsType}
-              sortProducts={this.sortProducts}
-              minFilter={this.state.minFilter}
-              maxFilter={this.state.maxFilter}
-              nameFilter={this.state.nameFilter}
-              onChangeMinFilter={this.onChangeMinFilter}
-              onChangeMaxFilter={this.onChangeMaxFilter}
-              onChangeNameFilter={this.onChangeNameFilter}
-            ></Filter>
-          </FilterContainer>
-          <div>
-            <Products
-              products={this.state.products}
-              addToCart={this.addToCart}
-              minFilter={this.state.minFilter}
-              maxFilter={this.state.maxFilter}
-              nameFilter={this.state.nameFilter}
-            ></Products>
-          </div>
-        </Main>
-        <FooterMain>Todos os direitos reservados.</FooterMain>
-      </GridContainer>
+      <div>
+        {this.renderizarPagina(this.state.pageValue)}
+      </div>
     );
   }
 }

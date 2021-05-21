@@ -68,7 +68,7 @@ class Header extends React.Component {
         <MainHair>
           <HeaderLink href="/">
             <LeftHeader>
-              <HeaderIcon src={icon} alt="icone-cabecalho" />
+              <HeaderIcon src={icon} alt="icone-cabecalho" onClick = {this.props.aoClicarCabecalhoEsquerdo}/>
               <div>
                 <HeadTitle>BURACO DE MINHOCA</HeadTitle>
                 <HeaderSubtitle>
@@ -82,7 +82,7 @@ class Header extends React.Component {
             <span>ENTRE</span>
             <span>COMPRAS</span>
             <HeaderLink href="./components/Cart/Cart.js">
-              <CarIcon src={iconCart} alt="icone-carrinho"></CarIcon>
+              <CarIcon src={iconCart} alt="icone-carrinho" onClick={this.props.aoClicar}></CarIcon>
             </HeaderLink>
           </NavbarHeader>
         </MainHair>
