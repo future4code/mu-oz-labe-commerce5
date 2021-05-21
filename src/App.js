@@ -1,9 +1,40 @@
 import React from "react";
-// import Cart from "./components/Cart/Cart";
+import Cart from "./components/Cart/Cart";
 import Filter from "./components/Filter/Filter";
 import Products from "./components/Products/Products";
 import data from "./data.json";
 import Header from "./components/Header/Header.js"
+import styled from 'styled-components';
+
+const ContainerGrid = styled.div`
+display: grid;
+grid-template-areas:
+  "header"
+  "main"
+  "footer";
+grid-template-rows: 8rem 1fr 5rem;
+grid-template-columns: 1fr;
+height: 100%;
+`
+const ContainerFiltro = styled.div`
+display: flex;
+flex-wrap: wrap;
+background-color: #ffff;
+top: 2rem;
+position: sticky;
+height: 41.5rem;
+border-radius: 25px;
+margin-right: 1rem;
+`
+const ContainerPrincipal = styled.div`
+grid-area: main;
+margin: 40px;
+display: flex;
+flex-direction: row;
+`
+const ContainerProdutos = styled.div`
+flex: 3 60rem;
+`
 
 class App extends React.Component {
   constructor() {
@@ -17,6 +48,7 @@ class App extends React.Component {
       minFilter: 1,
       maxFilter: 1000,
       nameFilter: "",
+      valorPagina: 'inicial',
     };
   }
 
@@ -94,29 +126,31 @@ class App extends React.Component {
     this.setState({ nameFilter: event.target.value });
   };
 
-  render() {
-    return (
-      <div className="grid-container">
-        <Header />
-        <main>
-          <div className="container-filtro">
-            <Filter
-              count={this.state.products.length}
-              size={this.state.size}
-              type={this.state.type}
-              sort={this.state.sort}
-              filterProductsSize={this.filterProductsSize}
-              filterProductsType={this.filterProductsType}
-              sortProducts={this.sortProducts}
-              minFilter={this.state.minFilter}
-              maxFilter={this.state.maxFilter}
-              nameFilter={this.state.nameFilter}
-              onChangeMinFilter={this.onChangeMinFilter}
-              onChangeMaxFilter={this.onChangeMaxFilter}
-              onChangeNameFilter={this.onChangeNameFilter}
-            ></Filter>
-          </div>
-          <div className="main">
+  renderizarPagina = (valorPagina) =>{
+    switch(valorPagina){
+      case 'inicial':
+        return (
+        <ContainerGrid>
+          <Header aoClicar = {() => this.goCart()} />
+          <ContainerPrincipal>
+            <ContainerFiltro>
+              <Filter
+                count={this.state.products.length}
+                size={this.state.size}
+                type={this.state.type}
+                sort={this.state.sort}
+                filterProductsSize={this.filterProductsSize}
+                filterProductsType={this.filterProductsType}
+                sortProducts={this.sortProducts}
+                minFilter={this.state.minFilter}
+                maxFilter={this.state.maxFilter}
+                nameFilter={this.state.nameFilter}
+                onChangeMinFilter={this.onChangeMinFilter}
+                onChangeMaxFilter={this.onChangeMaxFilter}
+                onChangeNameFilter={this.onChangeNameFilter}
+              ></Filter>
+            </ContainerFiltro>
+            <ContainerProdutos>
               <Products
                 products={this.state.products}
                 addToCart={this.addToCart}
@@ -124,9 +158,30 @@ class App extends React.Component {
                 maxFilter={this.state.maxFilter}
                 nameFilter={this.state.nameFilter}
               ></Products>
-          </div>
-        </main>
-        <footer>Todos os direitos reservados.</footer>
+            </ContainerProdutos>
+          </ContainerPrincipal>
+          <footer>Todos os direitos reservados.</footer>
+        </ContainerGrid>)
+      case 'carrinho':
+        return(
+        <ContainerGrid>
+          <Header aoClicarCabecalhoEsquerdo = {() => this.goHome()}/>
+          <Cart />
+        </ContainerGrid>)
+      default:
+        return 0
+    }    
+  }
+  goCart = () =>{
+    this.setState({valorPagina: 'carrinho'})
+  }
+  goHome = () =>{
+    this.setState({valorPagina: 'inicial'})
+  }
+  render() {
+    return (
+      <div>
+        {this.renderizarPagina(this.state.valorPagina)}
       </div>
     );
   }
