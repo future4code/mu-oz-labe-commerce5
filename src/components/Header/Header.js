@@ -13,11 +13,6 @@ const HeaderMain = styled.header`
   padding: 0.5rem;
 `;
 
-const HeaderLink = styled.a`
-  text-decoration: none;
-  appearance: none;
-`;
-
 const HeadTitle = styled.span`
   font-size: 2.7rem;
   color: #ffff;
@@ -49,46 +44,49 @@ const HeaderIcon = styled.img`
   width: auto;
 `;
 
-const CarIcon = styled.img`
+const CartIcon = styled.img`
   height: 4rem;
   width: auto;
   background-color: #ffff;
   border-radius: 50%;
+  &:hover {cursor: pointer;};
 `;
 
 const LeftHeader = styled.div`
   display: flex;
   align-items: center;
+  &:hover {cursor: pointer;};
 `;
 
-class Header extends React.Component {
+const HeaderLinks = styled.span`
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  };
+`;
+
+export default class Header extends React.Component {
   render() {
     return (
       <HeaderMain>
         <MainHair>
-          <HeaderLink href="/">
-            <LeftHeader>
-              <HeaderIcon src={icon} alt="icone-cabecalho" onClick = {this.props.aoClicarCabecalhoEsquerdo}/>
-              <div>
-                <HeadTitle>BURACO DE MINHOCA</HeadTitle>
-                <HeaderSubtitle>
-                  O E-COMMERCE QUE É DE OUTRA GALÁXIA!
+          <LeftHeader onClick={this.props.leftHeaderClick}>
+            <HeaderIcon src={icon} alt="icone-cabecalho" />
+            <div>
+              <HeadTitle>BURACO DE MINHOCA</HeadTitle>
+              <HeaderSubtitle>
+                O E-COMMERCE QUE É DE OUTRA GALÁXIA!
                 </HeaderSubtitle>
-              </div>
-            </LeftHeader>
-          </HeaderLink>
+            </div>
+          </LeftHeader>
           <NavbarHeader>
-            <span>CRIE SUA CONTA</span>
-            <span>ENTRE</span>
-            <span>COMPRAS</span>
-            <HeaderLink href="./components/Cart/Cart.js">
-              <CarIcon src={iconCart} alt="icone-carrinho" onClick={this.props.aoClicar}></CarIcon>
-            </HeaderLink>
+            <HeaderLinks>CRIE SUA CONTA</HeaderLinks>
+            <HeaderLinks>ENTRE</HeaderLinks>
+            <HeaderLinks>COMPRAS</HeaderLinks>
+            <CartIcon src={iconCart} alt="icone-carrinho" onClick={this.props.cartItemClick}></CartIcon>
           </NavbarHeader>
         </MainHair>
       </HeaderMain>
     );
   }
 }
-
-export default Header;
