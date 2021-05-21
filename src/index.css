@@ -4,6 +4,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+
 body,
 #root {
   height: 100vh;
@@ -16,12 +17,4 @@ body, input, select, button, textarea{
 }
 a:hover{
   color: #190c63;
-}
-footer {
-  grid-area: footer;
-  background-color: #203040;
-  color: #ffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
