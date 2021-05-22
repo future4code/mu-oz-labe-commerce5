@@ -28,32 +28,35 @@
 ## ⚙️ Explicação da Aplicação
 
 O aplicativo possui 4 componentes:
-Cabeçalho
-Carrinho
-Filtro
-Produtos
+1) Cabeçalho
+2) Filtro
+3) Produtos
+4) Carrinho
 
-É uma landing page de comércio eletrônico com o nome Buraco de Minhoca encarregado de vender camisetas juvenis com motivos divertidos espaciais. São 26 produtos divididos em camisetas infantis, masculinas ou femininas para o gosto de qualquer pessoa.
+![](ecommerce-componentes.jpg)
+![](ecommerce-componente4.jpg)
 
-Cada produto está dentro de um cartão que mostra a imagem de referência da camiseta, o nome, o preço e um botão disponível para adicioná-la ao carrinho.
+Trata-se de uma landing page de comércio eletrônico denominada Buraco de Minhoca voltado para a venda de  camisetas juvenis com motivos espaciais divertidos. A página exibe 26 produtos divididos em camisetas infantis, masculinas ou femininas acessíveis a públicos diversos.
 
-Quando o usuário clica no nome do produto, imediatamente será exibida uma janela modal que mostrará os demais detalhes como uma descrição, os tamanhos e modelos disponíveis da camiseta selecionada. O usuário também pode adicionar ao carrinho a camiseta respetiva diretamente da janela modal.
+Cada produto (Componente 3) é exibido dentro de um cartão, que mostra a imagem de referência da camiseta, o nome, o preço e um botão disponível para adicioná-la ao carrinho.
 
-Do lado esquerdo temos o filtro e as preferências para mostrar os produtos.
+Quando o usuário clica no nome do produto, imediatamente surge uma janela modal que mostrará os demais detalhes da camiseta selecionada, tais como: uma descrição do produto, os tamanhos e modelos disponíveis. O usuário também pode adicionar ao carrinho a respectiva camiseta, diretamente da janela modal.
 
-O usuário poderá ordenar os produtos por preço.
+Do lado esquerdo temos o filtro e as preferências (Componente 2) para mostrar os produtos.
+Na Componente 2, o usuário poderá efetuar as seguintes ações: 
+ - Ordenar os produtos por preço.
 
-O usuário pode decidir ver os produtos pelo tamanho disponível.
+ - Decidir ver os produtos pelo tamanho disponível.
 
-O usuário pode decidir se deseja ver os produtos por tipo.
+ - Decidir se deseja ver os produtos por tipo.
 
-Finalmente poderá fazer uma busca filtrando por um preço mínimo ou máximo que ele define, relacionado ao nome da camisa, inclusive pode fazer a busca pelo nome ou pelo preço individualmente.
+Finalmente, o usuário poderá ainda fazer uma busca filtrando por um preço mínimo ou máximo que ele define, relacionado ao nome da camisa. Adicionalmente, o usuário poderá, inclusive, fazer a busca pelo nome ou pelo preço individualmente.
 
-Outra das principais funcionalidades da aplicação é a do carrinho de compras, onde se refletirão os produtos que o usuário escolherá para sua posterior compra. Para ir ao carrinho, o usuário deve clicar no ícone do carrinho localizado no canto superior direito.
+Outra funcionalidade da aplicação é a do carrinho de compras (Componente 4). Ao selecionar está componente, sugirá numa outra aba os produtos que o usuário escolher para sua posterior compra. Para ir ao carrinho, o usuário deve clicar no ícone do carrinho localizado no canto superior direito do cabeçalho (Componente 1).
 
-Nesta seção, o usuário pode ver a quantidade de produtos que adicionou, são exibidos ademais, a imagem, o nome da camiseta e o preço unitário, preço total por item e preço total da compra.
+Nesta seção, o usuário pode ver a quantidade de produtos que adicionou. Além disso, são exibidos a imagem, o nome da camiseta, o preço unitário, preço total por item e, por fim, o preço total da compra.
 
-O usuário também tem a possibilidade de apagar produtos um a um, apagar todo o item ou retornar à página principal para adicionar mais unidades ou um produto diferente. Pode vaziar o carrinho.
+O usuário também tem a possibilidade de remover os produtos do carrinho um a um, apagar todos os itens de uma vez (esvaziando o carrinho), ou retornar à página principal para adicionar mais unidades de produtos já selecionados ou um produto diferente.
 
 ## ⚙️ Pasta src ou Source:
 
@@ -125,8 +128,8 @@ npm run start
 
 ##  Conclusão
 
-Este projeto LabEcommerce corresponde ao módulo 5 do curso Labenu, onde iniciamos a exploração da biblioteca React.
-No final do projeto tentamos usar e praticar todo o conteúdo visto em cada sessão de aula:
+Este projeto LabEcommerce corresponde ao Módulo 5 do curso Labenu, onde iniciamos a exploração da biblioteca React.
+No final do projeto tentamos usar e praticar todo o conteúdo visto em cada sessão da aula:
 
 - Ciclo de vida dos componentes
 - Coerção de tipos não Javascript
@@ -136,7 +139,7 @@ No final do projeto tentamos usar e praticar todo o conteúdo visto em cada sess
 - Armazenamento local
 - Técnicas de depuração e hardware
 
-É importante mencionar que também procuramos colocar em prática técnicas, códigos e conselhos encontrados na documentação e na web. Ainda há muito por andar, mas no geral ficamos felizes com o resultado, sem mais delongas,
+É importante mencionar que também procuramos colocar em prática técnicas, códigos e conselhos encontrados na documentação e na web. Ainda há muito por andar, mas no geral ficamos felizes com o resultado, sem mais ao momento,
 
 Atenciosamente,
 
@@ -145,4 +148,4 @@ Ernesto Mognol, Gremis Tovar, Jeane Melo.
 
 P.D. Um protótipo deste aplicativo (MVP - Produto Mínimo Viável) pode ser visto no seguinte endereço:
 
-http://.surge.sh/
+http://wormhole.surge.sh/
