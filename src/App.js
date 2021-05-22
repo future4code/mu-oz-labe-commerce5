@@ -73,12 +73,12 @@ class App extends React.Component {
               ? 1
               : -1
             : sort === "higherprice"
-            ? a.price < b.price
-              ? 1
-              : -1
-            : a._id < b._id
-            ? 1
-            : -1
+              ? a.price < b.price
+                ? 1
+                : -1
+              : a._id < b._id
+                ? 1
+                : -1
         ),
     }));
     this.setState({ type: "" });
@@ -139,77 +139,107 @@ class App extends React.Component {
     this.setState({ sort: "" });
     this.setState({ size: "" });
   };
-  renderizarPagina = (pageValue) =>{
-    switch(pageValue){
+  renderizarPagina = (pageValue) => {
+    switch (pageValue) {
       case 'home':
         return (
-        <GridContainer>
-          <Header
-            cartItemClick = {() => this.goCart()}
-            leftHeaderClick = {() => this.goHome()}/>
-          <Main>
-            <FilterContainer>
-              <Filter
-                count={this.state.products.length}
-                size={this.state.size}
-                type={this.state.type}
-                sort={this.state.sort}
-                filterProductsSize={this.filterProductsSize}
-                filterProductsType={this.filterProductsType}
-                sortProducts={this.sortProducts}
-                minFilter={this.state.minFilter}
-                maxFilter={this.state.maxFilter}
-                nameFilter={this.state.nameFilter}
-                onChangeMinFilter={this.onChangeMinFilter}
-                onChangeMaxFilter={this.onChangeMaxFilter}
-                onChangeNameFilter={this.onChangeNameFilter}
-              ></Filter>
-            </FilterContainer>
-            <ProductContainer>
-              <Products
-                products={this.state.products}
-                addToCart={this.addToCart}
-                minFilter={this.state.minFilter}
-                maxFilter={this.state.maxFilter}
-                nameFilter={this.state.nameFilter}
-              ></Products>
-            </ProductContainer>
-          </Main>
-          <FooterMain>Todos os direitos reservados.</FooterMain>
-        </GridContainer>)
+          <GridContainer>
+            <Header
+              cartItemClick={() => this.goCart()}
+              leftHeaderClick={() => this.goHome()} />
+            <Main>
+              <FilterContainer>
+                <Filter
+                  count={this.state.products.length}
+                  size={this.state.size}
+                  type={this.state.type}
+                  sort={this.state.sort}
+                  filterProductsSize={this.filterProductsSize}
+                  filterProductsType={this.filterProductsType}
+                  sortProducts={this.sortProducts}
+                  minFilter={this.state.minFilter}
+                  maxFilter={this.state.maxFilter}
+                  nameFilter={this.state.nameFilter}
+                  onChangeMinFilter={this.onChangeMinFilter}
+                  onChangeMaxFilter={this.onChangeMaxFilter}
+                  onChangeNameFilter={this.onChangeNameFilter}
+                ></Filter>
+              </FilterContainer>
+              <ProductContainer>
+                <Products
+                  products={this.state.products}
+                  addToCart={this.addToCart}
+                  minFilter={this.state.minFilter}
+                  maxFilter={this.state.maxFilter}
+                  nameFilter={this.state.nameFilter}
+                ></Products>
+              </ProductContainer>
+            </Main>
+            <FooterMain>Todos os direitos reservados.</FooterMain>
+          </GridContainer>)
       case 'cart':
-        return(
-        <GridContainer>
-          <Header
-          cartItemClick = {() => this.goCart()}
-          leftHeaderClick = {() => this.goHome()}/>
-          <Cart 
-            cart = {this.state.cartItems}
-            cartItemQuantMinus = {() => this.cartItemQuantMinus}
-            cartItemQuantPlus = {() => this.cartItemQuantPlus}
-          />
-        </GridContainer>)
+        return (
+          <GridContainer>
+            <Header
+              cartItemClick={() => this.goCart()}
+              leftHeaderClick={() => this.goHome()} />
+            <Cart
+              cart={this.state.cartItems}
+              addToCart={this.addToCart}
+              removeFromCart={this.removeFromCart}
+              clearCart={() => this.clearCart()}
+              backHomeButton={() => this.goHome()}
+              removeItem ={this.removeItem}
+            />
+          </GridContainer>)
       default:
         return 0
-    }    
+    }
   }
-  goCart = () =>{
-    this.setState({pageValue: 'cart'})
+  goCart = () => {
+    this.setState({ pageValue: 'cart' })
   }
-  goHome = () =>{
-    this.setState({pageValue: 'home'})
+  goHome = () => {
+    this.setState({ pageValue: 'home' })
   }
-  cartItemQuantPlus = (productQuant) => {
-    // this.setState({cartItemQuant: this.state.cartItemQuant + 1})
-  }
-  cartItemQuantMinus = (productQuant) => {
-    // this.setState({cartItemQuant: this.state.cartItemQuant - 1})
-  }
-  removeFromCart = (product) => {};
-
+  removeFromCart = (product) => {
+    const cartItems = this.state.cartItems.slice();
+    let alreadyInCart = false;
+    cartItems.forEach((item) => {
+      if (item._id === product._id) {
+        item.count = item.count - 1;
+        alreadyInCart = true;
+      }
+    });
+    if (!alreadyInCart) {
+      cartItems.push({ ...product, count: 1 });
+    }
+    this.setState({
+      cartItems: cartItems.filter((x) => x.count > 0),
+    });
+  };
   addToCart = (product) => {
-    const newCartItem = product
-    this.setState({cartItems: [...this.state.cartItems, newCartItem]})
+    const cartItems = this.state.cartItems.slice();
+    let alreadyInCart = false;
+    cartItems.forEach((item) => {
+      if (item._id === product._id) {
+        item.count++;
+        alreadyInCart = true;
+      }
+    });
+    if (alreadyInCart === false) {
+      cartItems.push({ ...product, count: 1 });
+    }
+    this.setState({ cartItems });
+  };
+  clearCart = () => {
+    this.setState({cartItems: []})
+  }
+  removeItem = (product) => {
+    const cartItems = this.state.cartItems.slice();
+    this.setState({
+      cartItems: cartItems.filter((x) => x._id !== product._id),
+    });
   };
   render() {
     return (
