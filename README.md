@@ -51,9 +51,9 @@ Finalmente poderá fazer uma busca filtrando por um preço mínimo ou máximo qu
 
 Outra das principais funcionalidades da aplicação é a do carrinho de compras, onde se refletirão os produtos que o usuário escolherá para sua posterior compra. Para ir ao carrinho, o usuário deve clicar no ícone do carrinho localizado no canto superior direito.
 
-Nesta seção, o usuário pode ver a quantidade de produtos que adicionou, são exibidos ademais, a imagem, o nome da camiseta e o preço total da compra.
+Nesta seção, o usuário pode ver a quantidade de produtos que adicionou, são exibidos ademais, a imagem, o nome da camiseta e o preço unitário, preço total por item e preço total da compra.
 
-O usuário também tem a possibilidade de retirar os produtos ou retornar à página principal para adicionar mais unidades ou um produto diferente.
+O usuário também tem a possibilidade de apagar produtos um a um, apagar todo o item ou retornar à página principal para adicionar mais unidades ou um produto diferente. Pode vaziar o carrinho.
 
 ## ⚙️ Pasta src ou Source:
 
