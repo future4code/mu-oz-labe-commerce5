@@ -20,9 +20,6 @@ export default class Filter extends Component {
   render() {
     return (
       <FilterContainer>
-        <div className="filter-result">
-          {this.props.count} Produtos Encontrados
-        </div>
         <div className="filter-sort">
           <p>Ordenar produtos por preço</p>
           <select value={this.props.sort} onChange={this.props.sortProducts}>
