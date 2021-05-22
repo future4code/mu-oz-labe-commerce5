@@ -91,7 +91,6 @@ class App extends React.Component {
     if (event.target.value === "") {
       this.setState({
         size: event.target.value,
-        type: event.target.value,
         products: data.products,
       });
     } else {
