@@ -44,7 +44,7 @@ export default class Filter extends Component {
           <p>Mostrar produtos pelo tipo</p>
           <select value={this.props.type} onChange={this.props.filterProductsType}>
             <option value="">TODOS</option>
-            <option value="Feminina">Femenina</option>
+            <option value="Feminina">Feminina</option>
             <option value="Masculina">Masculina</option>
             <option value="Infantil">Infantil</option>
           </select>
