@@ -3,12 +3,12 @@ import Cart from "./components/Cart/Cart";
 import Filter from "./components/Filter/Filter";
 import Products from "./components/Products/Products";
 import data from "./data.json";
-import Header from "./components/Header/Header.js"
-import styled from 'styled-components';
+import Header from "./components/Header/Header.js";
+import styled from "styled-components";
 
 const ProductContainer = styled.div`
-flex: 3 60rem;
-`
+  flex: 3 60rem;
+`;
 const GridContainer = styled.div`
   display: grid;
   grid-template-areas:
@@ -51,14 +51,16 @@ class App extends React.Component {
     super();
     this.state = {
       products: data.products,
-      cartItems: [],
+      cartItems: localStorage.getItem("cartItems")
+        ? JSON.parse(localStorage.getItem("cartItems"))
+        : [],
       size: "",
       type: "",
       sort: "",
-      minFilter: 1,
-      maxFilter: 1000,
+      minFilter: "",
+      maxFilter: "",
       nameFilter: "",
-      pageValue: 'home',
+      pageValue: "home",
     };
   }
   sortProducts = (event) => {
@@ -73,12 +75,12 @@ class App extends React.Component {
               ? 1
               : -1
             : sort === "higherprice"
-              ? a.price < b.price
-                ? 1
-                : -1
-              : a._id < b._id
-                ? 1
-                : -1
+            ? a.price < b.price
+              ? 1
+              : -1
+            : a._id < b._id
+            ? 1
+            : -1
         ),
     }));
     this.setState({ type: "" });
@@ -141,12 +143,13 @@ class App extends React.Component {
   };
   renderizarPagina = (pageValue) => {
     switch (pageValue) {
-      case 'home':
+      case "home":
         return (
           <GridContainer>
             <Header
               cartItemClick={() => this.goCart()}
-              leftHeaderClick={() => this.goHome()} />
+              leftHeaderClick={() => this.goHome()}
+            />
             <Main>
               <FilterContainer>
                 <Filter
@@ -176,32 +179,36 @@ class App extends React.Component {
               </ProductContainer>
             </Main>
             <FooterMain>Todos os direitos reservados.</FooterMain>
-          </GridContainer>)
-      case 'cart':
+          </GridContainer>
+        );
+      case "cart":
         return (
           <GridContainer>
             <Header
               cartItemClick={() => this.goCart()}
-              leftHeaderClick={() => this.goHome()} />
+              leftHeaderClick={() => this.goHome()}
+            />
             <Cart
               cart={this.state.cartItems}
               addToCart={this.addToCart}
               removeFromCart={this.removeFromCart}
               clearCart={() => this.clearCart()}
+              end={() => this.end()}
               backHomeButton={() => this.goHome()}
-              removeItem ={this.removeItem}
+              removeItem={this.removeItem}
             />
-          </GridContainer>)
+          </GridContainer>
+        );
       default:
-        return 0
+        return 0;
     }
-  }
+  };
   goCart = () => {
-    this.setState({ pageValue: 'cart' })
-  }
+    this.setState({ pageValue: "cart" });
+  };
   goHome = () => {
-    this.setState({ pageValue: 'home' })
-  }
+    this.setState({ pageValue: "home" });
+  };
   removeFromCart = (product) => {
     const cartItems = this.state.cartItems.slice();
     let alreadyInCart = false;
@@ -217,6 +224,7 @@ class App extends React.Component {
     this.setState({
       cartItems: cartItems.filter((x) => x.count > 0),
     });
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   };
   addToCart = (product) => {
     const cartItems = this.state.cartItems.slice();
@@ -231,22 +239,26 @@ class App extends React.Component {
       cartItems.push({ ...product, count: 1 });
     }
     this.setState({ cartItems });
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   };
   clearCart = () => {
-    this.setState({cartItems: []})
-  }
+    const cartItems = this.state.cartItems
+    this.setState({ cartItems: [] });
+    localStorage.removeItem("cartItems", JSON.stringify(cartItems));
+  };
+
+  end = () => {
+    alert("Compra finalizada!! Obrigada pela preferência!!");
+  };
   removeItem = (product) => {
     const cartItems = this.state.cartItems.slice();
     this.setState({
       cartItems: cartItems.filter((x) => x._id !== product._id),
     });
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   };
   render() {
-    return (
-      <div>
-        {this.renderizarPagina(this.state.pageValue)}
-      </div>
-    );
+    return <div>{this.renderizarPagina(this.state.pageValue)}</div>;
   }
 }
 

@@ -176,7 +176,7 @@ export default class Cart extends React.Component {
                   this.props.cart.reduce((a, c) => a + c.price * c.count, 0)
                 )}
                 <ButtonPrimary>
-                  <ButtonDiv>FINALIZAR COMPRA</ButtonDiv>
+                  <ButtonDiv  onClick={this.props.end}>FINALIZAR COMPRA</ButtonDiv>
                 </ButtonPrimary>
               </TitleContainer>
             )}
