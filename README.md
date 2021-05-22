@@ -39,7 +39,7 @@ Cada produto está dentro de um cartão que mostra a imagem de referência da ca
 
 Quando o usuário clica no nome do produto, imediatamente será exibida uma janela modal que mostrará os demais detalhes como uma descrição, os tamanhos e modelos disponíveis da camiseta selecionada. O usuário também pode adicionar ao carrinho a camiseta respetiva diretamente da janela modal.
 
-Do lado esquerdo temos o filtro, que mostra a quantidade de produtos disponíveis, somente quando o usuário utiliza as três primeiras seleções.
+Do lado esquerdo temos o filtro e as preferências para mostrar os produtos.
 
 O usuário poderá ordenar os produtos por preço.
 
