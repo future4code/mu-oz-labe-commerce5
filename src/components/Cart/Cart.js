@@ -17,6 +17,7 @@ const TitleContainer = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
+flex-direction: column;
 background-color: black;
 padding: 1.2rem;
 border-radius: 25px;
@@ -63,42 +64,99 @@ align-items: center;
 `
 const QuantButtons = styled.button`
 border: none;
-margin: 0 5px 0 5px;`
+margin: 0 5px 0 5px;
+&:hover {cursor: pointer;};
+`
+const EmptyCart = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 400px;
+`
+const EmptyCartLine = styled.div`
+font-size: 32pt;
+`
+const ButtonContainer = styled.div`
+margin-top: 16px;
+display:flex;
+`
+const PageButtons = styled.button`
+border-radius: 25px;
+padding: 8px 24px;
+background-color: #203040;
+color: #f0f0f0;
+&:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+};
+`
+const ButtonPrimary = styled.button`
+  background-color: #203040;
+  margin: 15px;
+  border-radius: 25px;
+  color: #f0f0f0;
+  cursor: pointer;
+  display: grid;
+  padding: 8px 24px;
+  &:hover {
+    background-color: #f0f0f0;
+    color: black;
+  }
+`;
+const ButtonDiv = styled.div`
+  margin: 0 auto;
+`;
 
 export default class Cart extends React.Component {
-
+  renderPage = () => {
+    if (this.props.cart.length > 0) {
+      return this.renderCart()
+    }
+    else {
+      return this.renderEmptyCart()
+    }
+  }
   renderCart = () => {
-    return(
-      this.props.cart.map((product, index) => (
-      <CartLine key={index}>
-        <CartImage>
-          <ProductIcon src={product.image} alt={product.title} />
-        </CartImage>
-        <CartTitle>
-          <SubTitle>PRODUTO</SubTitle>
-          <Item>{product.title}</Item>
-        </CartTitle>
-        <CartSession>
-          <SubTitle>QUANT</SubTitle>
-          <Item>
-            <QuantButtons onClick={this.props.cartItemQuantPlus(product)}>-</QuantButtons>
-            {product.quant}
-            <QuantButtons onClick={this.props.cartItemQuantPlus(product)}>+</QuantButtons>
-          </Item>
-        </CartSession>
-        <CartSession>
-          <SubTitle>PREÇO UN.</SubTitle>
-          <Item>{formatCurrency(product.price)}</Item>
-        </CartSession>
-        <CartSession>
-          <SubTitle>PREÇO TOTAL</SubTitle>
-          <Item>Total</Item>
-        </CartSession>
-        <CartSession>
-          <button>Remover Item</button>
-        </CartSession>
-      </CartLine>)))
+    return (
+      this.props.cart.map((product) => (
+        <CartLine key={product._id}>
+          <CartImage>
+            <ProductIcon src={product.image} alt={product.title} />
+          </CartImage>
+          <CartTitle>
+            <SubTitle>PRODUTO</SubTitle>
+            <Item>{product.title}</Item>
+          </CartTitle>
+          <CartSession>
+            <SubTitle>QUANT</SubTitle>
+            <Item>
+              <QuantButtons onClick={() => this.props.removeFromCart(product)}>-</QuantButtons>
+              {product.count}
+              <QuantButtons onClick={() => this.props.addToCart(product)}>+</QuantButtons>
+            </Item>
+          </CartSession>
+          <CartSession>
+            <SubTitle>PREÇO UN.</SubTitle>
+            <Item>{formatCurrency(product.price)}</Item>
+          </CartSession>
+          <CartSession>
+            <SubTitle>PREÇO TOTAL</SubTitle>
+            <Item>{formatCurrency(product.price * product.count)}</Item>
+          </CartSession>
+          <CartSession>
+            <button onClick={() => this.props.removeItem(product)}>Remover Item</button>
+          </CartSession>
+        </CartLine>)))
   };
+  renderEmptyCart = () => {
+    return <EmptyCart>
+      <div>
+        <EmptyCartLine>SEU CARRINHO ESTÁ VAZIO :(</EmptyCartLine>
+      </div>
+    </EmptyCart>
+  }
 
   render() {
     return (
@@ -107,8 +165,27 @@ export default class Cart extends React.Component {
           <PageTitle>CARRINHO DE COMPRAS</PageTitle>
         </TitleContainer>
         <CartContainer>
-          {this.renderCart()}
+          {this.renderPage()}
         </CartContainer>
+        <MainContainer>
+          <PageTitle>
+            {this.props.cart.length !== 0 && (
+              <TitleContainer>
+                Total:{" "}
+                {formatCurrency(
+                  this.props.cart.reduce((a, c) => a + c.price * c.count, 0)
+                )}
+                <ButtonPrimary>
+                  <ButtonDiv>FINALIZAR COMPRA</ButtonDiv>
+                </ButtonPrimary>
+              </TitleContainer>
+            )}
+          </PageTitle>
+        </MainContainer>
+        <ButtonContainer>
+          <PageButtons onClick={this.props.clearCart}>REMOVER TUDO</PageButtons>
+          <PageButtons onClick={this.props.backHomeButton}>VOLTAR A HOME</PageButtons>
+        </ButtonContainer>
       </MainContainer>
     );
   }
