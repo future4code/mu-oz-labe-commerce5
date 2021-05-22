@@ -92,7 +92,7 @@ class App extends React.Component {
       this.setState({
         size: event.target.value,
         type: event.target.value,
-        product: data.products,
+        products: data.products,
       });
     } else {
       this.setState({
@@ -108,7 +108,7 @@ class App extends React.Component {
 
   filterProductsType = (event) => {
     if (event.target.value === "") {
-      this.setState({ type: event.target.value, product: data.products });
+      this.setState({ type: event.target.value, products: data.products });
     } else {
       this.setState({
         type: event.target.value,
