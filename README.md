@@ -107,16 +107,6 @@ cd `mu-oz-labe-commerce5` e rode:
 npm install
 ```
 
-
-```bash
-npm install styled-components
-```
-
-
-```bash
-npm install react-modal
-```
-
 para iniciar:
 
 ```bash
