@@ -1,0 +1,263 @@
+{
+    "products": [
+        {
+        "_id": "shirt1",
+        "image": "/images/a.png",
+        "title": "Cor de rosa ganhando o espaço!",
+        "description": "Blusa em decote canoa para lembrar que tem rosa no espaço sim! Blusa em decote canoa, com detalhes em rosa, nos lembra de Katherine Jonhson, Margaret Hamilton, Nancy Roman, Katie Bouman e tantas outras cientistas levaram o rosa para o espaço sideral! Criada para mulheres além do tempo e do espaço! ",
+        "availableSizes": ["XS", "S", "M", "L"],
+        "availableType": ["Feminina", "Infantil"],
+        "price": 69.19,
+        "quant": 1
+        },
+        {
+        "_id": "shirt2",
+        "image": "/images/b.png",
+        "title": "Camiseta de verão com detalhe espaço",
+        "description": "Ideal para amenizar o calor resultante do aquecimento global! Estampa exclusiva, em malha de algodão, para quem tem os pés na terra e a cabeça na lua! Descontração, conforto e estilo disponível em diversos tamanhos!",
+        "availableSizes": ["S", "L", "XL"],
+        "availableType": ["Feminina", "Infantil"],
+        "price": 56.85,
+        "quant": 1
+        },
+        {
+        "_id": "shirt3",
+        "image": "/images/c.png",
+        "title": "Blusa astronauta manga longa",
+        "description": "Para aquelas e aqueles que sabem que o aquecimento global também baixa as temperaturas fora de hora! Siga os conselhos de sua mãe e tenha esse blusão quentinho sempre a mão para o caso de esfriar!",
+        "availableSizes": ["M", "L", "XL", "XXL"],  
+        "availableType": ["Feminina", "Masculina"],
+        "price": 87.50,
+        "quant": 1
+        },
+        {
+        "_id": "shirt4",
+        "image": "/images/d.png",
+        "title": "Dab espacial!",
+        "description": "Celebre suas conquistas vestindo nosso Dab espacial! Para pessoas arrojadas que sabem que o céu não é o limite! Conforto e qualidade disponível em diversos tamanhos.",
+        "availableSizes": ["XS", "L", "XL", "XXL"],
+        "availableType": ["Feminina", "Infantil"],
+        "price": 35.90,
+        "quant": 1
+        },
+        {
+        "_id": "shirt5",
+        "image": "/images/e.png",
+        "title": "... Going to Mars!",
+        "description": "Os problemas da Terra estão te deixando de cabeça quente? Mande tudo para o espaço e embarque, com muito humor, rumo a Marte! :D Criado por nós, com estilo para você.",
+        "availableSizes": ["S", "M", "L", "XL"],
+        "availableType": ["Feminina", "Masculina"],
+        "price": 129.90,
+        "quant": 1
+        },
+        {
+        "_id": "shirt6",
+        "image": "/images/f.png",
+        "title": "I watch meteors because space rocks",
+        "description": "Espaço, Ciência e Rock em uma única estampa! Essa camiseta celebra o amor pelo espaço, pela ciência e por coisas legais. Presente perfeito para observadores de meteóros, amantes de cometas, fãs do espaço e que não dispensam aquele Rock! :D ",
+        "availableSizes": ["XS", "S", "XL", "XXL"],
+        "availableType": ["Masculina", "Infantil"],
+        "price": 73.80,
+        "quant": 1
+        },
+        {
+        "_id": "shirt7",
+        "image": "/images/g.png",
+        "title": "Camisa Astronauta com balões planetários",
+        "description": "Ideal para quem carrega seus sonhos nas mãos! Cores firmes, malha em algodão disponível para sonhadores e sonhadoras de qualquer tamanho!",
+        "availableSizes": ["XS", "S", "M", "L", "XL", "XXL"],
+        "availableType": ["Feminina", "Masculina", "Infantil"],
+        "price": 55.60,
+        "quant": 1
+        },
+        {
+        "_id": "shirt8",
+        "image": "/images/h.png",
+        "title": "Camiseta honeymoon",
+        "description": "Presentei quem você ama com a sugestiva camiseta honeymoon! Aquele amor ilmitado, que desconhe frnteiras e obstáculos! A declaração de amor para carregar no peito :D ",
+        "availableSizes": ["M", "L", "XXL"],
+        "availableType": ["Feminina", "Masculina"],
+        "price": 53.68,
+        "quant": 1
+        },
+        {
+        "_id": "shirt9",
+        "image": "/images/i.png",
+        "title": "I need my space",
+        "description": "Já imaginou se as pessoas viessem com tutorial? Com esta camiseta ninguém vai dizer que você não avisou! Peça básica que todo bom guarda-roupa deve ter!",
+        "availableSizes": ["L", "XL", "XXL"],
+        "availableType": ["Feminina","Masculina"],
+        "price": 44.35,
+        "quant": 1
+        },
+        {
+        "_id": "shirt10",
+        "image": "/images/j.png",
+        "title": "Camiseta Sonhando Alto",
+        "description": "Para crianças que sonham alto desde a primeira infância! Linda camiseta em algodão, antialérigica. Conforto, qualidade, proteção e inspiração para crianças de todas as idades! ",
+        "availableSizes": ["XS", "S", "M"],
+        "availableType": ["Infantil"],
+        "price": 57.50,
+        "quant": 1
+        },
+        {
+        "_id": "shirt11",
+        "image": "/images/k.png",
+        "title": "Camiseta Capture ET",
+        "description": "Capture aquela pessoa ExTra ordinária com este presente cheio de humor e estilo! Preço especial de lançamento para que você não fique de fora desta jogada! Garanta a sua!",
+        "availableSizes": ["XS", "S", "L", "XL"],
+        "availableType": ["Feminina","Masculina","Infantil"],
+        "price": 48.80,
+        "quant": 1
+        },
+        {
+        "_id": "shirt12",
+        "image": "/images/l.png",
+        "title": "Camisa Mundo da Lua",
+        "description": "Aquela camisa que dispensa geolocalização! Informe onde seus pares podem lhe encontrar ;) Estampa exclusiva em malha cardada, com aquele toque suave e macio para que você se sinta em outro mundo!",
+        "availableSizes": ["S", "M", "L"],
+        "availableType": ["Feminina", "Masculina"],
+        "price": 54.70,
+        "quant": 1
+        },
+        {
+        "_id": "shirt13",
+        "image": "/images/m.png",
+        "title": "Blusa astronauta e sua bandeira",
+        "description": "Linda blusa em malha fria com decote em V, para quem busca seus ideais com criatividade e muito estilo!",
+        "availableSizes": ["XS", "S", "M", "L", "XXL"],
+        "availableType": ["Feminina", "Infantil"],
+        "price": 65.80,
+        "quant": 1
+        },
+        {
+        "_id": "shirt14",
+        "image": "/images/n.png",
+        "title": "Camiseta astronauta com balões infantil",
+        "description": "Conforto e proteção para quem mora em nosso coração. Para crianças espaciais! Em algodão penteado e antialérgicas.",
+        "availableSizes": ["XS", "S", "M"],
+        "availableType": ["Infantil"],
+        "price": 29.90,
+        "quant": 1
+        },
+        {
+        "_id": "shirt15",
+        "image": "/images/o.png",
+        "title": "Camisa You are here",
+        "description": "Aquela localização  básica para quem enxerga longe! Criatividade e inteligência para compor um look despojado e moderno! ",
+        "availableSizes": ["XS", "XL", "XXL"],
+        "availableType": ["Masculina", "Infantil"],
+        "price": 45.50,
+        "quant": 1
+        },
+        {
+        "_id": "shirt16",
+        "image": "/images/p.png",
+        "title": "Camisa Surfista do espaço",
+        "description": "Descontração e bom humor para quem gosta de altas ondas! Camisa manga curta masculina, em tricoline. Uma boa opção para te acompanhar nas férias!",
+        "availableSizes": ["M", "L", "XL", "XXL"],
+        "availableType": ["Masculina"],
+        "price": 84.90,
+        "quant": 1
+        },
+        {
+        "_id": "shirt17",
+        "image": "/images/q.png",
+        "title": "Camisa Flat Mars",
+        "description": "Porque desafiar as leis da física espacial apenas na terra? Extrapole o seu desconhecimento para todo o nosso sistema solar (?) :D Falando sério, rir ainda é o melhor remédio! Leve seu bom humor para as ruas e faça as pessoas refletirem! ",
+        "availableSizes": ["S","L","XL", "XXL"],
+        "availableType": ["Feminina", "Masculina"],
+        "price": 34.90,
+        "quant": 1
+        },
+        {"_id": "shirt18",
+        "image": "/images/r.png",
+        "title": "Camisa Today is a good day",
+        "description": "Estilo e conforto para lembrar que não se deixa para amanhã o que se pode fazer hoje!  Busque suas realizações com elegância e criatividade!",
+        "availableSizes": ["S", "L", "XL"],
+        "availableType": ["Feminina", "Masculina"],
+        "price": 70.00,
+        "quant": 1
+        },
+        {
+        "_id": "shirt19",
+        "image": "/images/s.png",
+        "title": "Dab espacial! (em decote canoa)",
+        "description": "Nossa loja tem Dab para todos os estilos! Linda camiseta em malha fria, com decote canoa, para celebrar as grandes conquistas! ",
+        "availableSizes": ["XS", "M", "L", "XXL"],
+        "availableType": ["Feminina", "Infantil"],
+        "price": 69.99,
+        "quant": 1
+        },
+        {
+        "_id": "shirt20",
+        "image": "/images/t.png",
+        "title": "Camiseta You are not alone",
+        "description": "Cada cabeça é um mundo, mas, ninguém está sozinho (a) no universo! Procure sua turma e ase divirta nessa aventura que é viver! Camiseta em malha cardada, disponível em diversos tamanhos.",
+        "availableSizes": ["S", "M", "L", "XL"],
+        "availableType": ["Feminina", "Masculina"],
+        "price": 109.90,
+        "quant": 1
+        },
+        {
+        "_id": "shirt21",
+        "image": "/images/u.png",
+        "title": "Camiseta Snoopy 1969",
+        "description": "O dog mais querido do planeta terra, também é o mascote oficial da NASA. 1969? Data insquecível para todos os amantes da lua! Essa estampa exclusiva,  traz marcos históricos para seu look casual!",
+        "availableSizes": ["XS", "S", "M", "XXL"],
+        "availableType": ["Feminina", "Infantil"],
+        "price": 89.90,
+        "quant": 1
+        },
+        {
+        "_id": "shirt22",
+        "image": "/images/v.png",
+        "title": "Camiseta I need more space (verão)",
+        "description": "Quanto maior o calor, mais as moléculas se agitam! Reinvidique seu espaço também nos dias quentes! Camiseta em meia malha penteada, 100% Algodão, maior durabilidade e qualidade.",
+        "availableSizes": ["S", "XL", "XXL"],
+        "availableType": ["Masculina", "Infantil"],
+        "price": 35.50,
+        "quant": 1
+        },
+        {
+        "_id": "shirt23",
+        "image": "/images/w.png",
+        "title": "Camiseta Hold on",
+        "description": "Para quem ama os espaço sideral mas, sabe que a Terra é nossa casa! Exprima o seu amor por nosso planeta, inspirando cuidado pelo lugar em que habitamos! Conscitenzação com estilo.",
+        "availableSizes": ["XS", "M", "L", "XXL"],
+        "availableType": ["Feminina", "Masculina", "Infantil"],
+        "price": 29.00,
+        "quant": 1
+        },
+        {
+        "_id": "shirt24",
+        "image": "/images/x.png",
+        "title": "Blusão com capuz I need more space",
+        "description": "Garantindo seu espaço bem quentinho! Elegância, conforto e estilo com a leveza do moleetom. Leve esta peça-chave para seu armário!",
+        "availableSizes": ["XS", "L", "XL", "XXL"],
+        "availableType": ["Feminina", "Masculina"],
+        "price": 114.99,
+        "quant": 1
+        },
+        {
+        "_id": "shirt25",
+        "image": "/images/y.png",
+        "title": "Camiseta Pluto is a planet",
+        "description": "Como assim rebaixar Plutão? Uma vez planeta sempre planeta! Declare seu amor aos pequenos usando esta camiseta! Conforto e estilo para as causa justas! :D",
+        "availableSizes": ["XS", "M", "XL", "XXL"],
+        "availableType": ["Feminina", "Masculina"],
+        "price": 45.90,
+        "quant": 1
+        },
+        {
+        "_id": "shirt26",
+        "image": "/images/z.png",
+        "title": "Blusão astronauta com balões",
+        "description": "A beleza dos sonhos unida ao conforto do moletom! Aquele estilo confortável, na medida ideal para o inverno brasileiro!",
+        "availableSizes": ["XS", "S", "L", "XL"],
+        "availableType": ["Feminina", "Infantil"],
+        "price": 98.90,
+        "quant": 1
+        }
+    ]
+}
